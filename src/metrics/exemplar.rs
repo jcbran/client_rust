@@ -20,8 +20,8 @@ use std::sync::Arc;
 /// An OpenMetrics exemplar.
 #[derive(Debug)]
 pub struct Exemplar<S, V> {
-    pub(crate) label_set: S,
-    pub(crate) value: V,
+    label_set: S,
+    value: V,
 }
 
 /////////////////////////////////////////////////////////////////////////////////
