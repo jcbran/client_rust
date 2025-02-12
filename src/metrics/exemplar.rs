@@ -20,10 +20,16 @@ use std::sync::Arc;
 /// An OpenMetrics exemplar.
 #[derive(Debug)]
 pub struct Exemplar<S, V> {
-    label_set: S,
-    value: V,
+    pub(crate) label_set: S,
+    pub(crate) value: V,
 }
 
+impl<S, V> Exemplar<S, V> {
+    /// Creates a new OpenMetrics exemplar.
+    pub fn new(label_set: S, value: V) -> Self {
+        Exemplar { label_set, value }
+    }
+}
 /////////////////////////////////////////////////////////////////////////////////
 // Counter
 
