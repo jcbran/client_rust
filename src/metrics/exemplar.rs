@@ -29,6 +29,14 @@ impl<S, V> Exemplar<S, V> {
     pub fn new(label_set: S, value: V) -> Self {
         Exemplar { label_set, value }
     }
+    /// Returns a reference to the exemplar's label set.
+    pub fn label_set(&self) -> &S {
+        &self.label_set
+    }
+    /// Returns a reference to the exemplar's value.
+    pub fn value(&self) -> &V {
+        &self.value
+    }
 }
 /////////////////////////////////////////////////////////////////////////////////
 // Counter
