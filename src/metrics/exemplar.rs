@@ -18,7 +18,7 @@ use std::sync::atomic::AtomicU64;
 use std::sync::Arc;
 
 /// An OpenMetrics exemplar.
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 pub struct Exemplar<S, V> {
     pub(crate) label_set: S,
     pub(crate) value: V,
